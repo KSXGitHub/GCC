@@ -8,13 +8,12 @@ before_script:
   - chmod u+x *
 script:
   - export GCC_REPO=$(pwd)
-    echo $GCC_REPO
-    echo $(pwd)
-    cd ..
-    echo $(pwd)
-    cd ..
-    echo $(pwd)
-  - exit 1
+  - cd ..
+  - mkdir objdir
+  - cd objdir
+  - $GCC_REPO/configure --prefix=$HOME/gcc --enable-languages=c,c++,fortran,go
+  - make
+  - make install
 branches:
   only:
     - master
