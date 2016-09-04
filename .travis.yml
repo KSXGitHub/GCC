@@ -8,9 +8,12 @@ before_script:
   - chmod u+x *
 script:
   - export GCC_REPO=$(pwd)
-  - cd ..
-  - echo Current directory
-  - echo $(pwd)
+    echo $GCC_REPO
+    echo $(pwd)
+    cd ..
+    echo $(pwd)
+    cd ..
+    echo $(pwd)
   - exit 1
 branches:
   only:
