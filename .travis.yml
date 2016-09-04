@@ -1,0 +1,14 @@
+sudo: required
+language: cpp
+compiler:
+  - gcc
+os:
+  - linux
+before_script:
+  - chmod u+x *
+script:
+  - echo $(pwd)
+  - exit 1
+branches:
+  only:
+    - master
