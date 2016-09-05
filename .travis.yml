@@ -8,6 +8,7 @@ before_script:
   - chmod u+x *
 script:
   - export GCC_REPO=$(pwd)
+  - $GCC_REPO/contrib/download_prerequisites
   - cd ..
   - mkdir objdir
   - cd objdir
